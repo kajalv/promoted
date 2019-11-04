@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-style: Helvetica;
 }
 
 .App-logo {
@@ -7,16 +8,26 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #78a1bb;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
 }
 
-.App-link {
-  color: #09d3ac;
+.App-title {
+  color: #e5dcc5;
+  font-size: calc(10px + 10vmin);
+}
+
+
+
+.App-search {
+  width: 80vh;
+  height: 8vh;
+  font-size: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-color: white;
 }
