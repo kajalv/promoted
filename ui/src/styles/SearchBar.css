@@ -1,15 +1,20 @@
 .searchbar-container {
-    width: 80vh;
     height: 30vh;
+    width: 30vw;
+    margin-left: 5vmin;
 }
 .search-form {
   position: relative;
-  width:80vh;
-  height: 40px;
+  width: 30vw;
+  height: 8vh;
   border-radius: 40px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
   background: #fff;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 
   &.focus {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
@@ -17,22 +22,26 @@
 
 }
 
+#searchBtn {
+  margin-right: 3vmin;
+  color: #696969;
+}
+
 .with-suggestions {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  box-shadow: none;
+
 }
 
 .search-input {
   position: absolute;
-  top: 10px;
-  left: 38px;
-  font-size: 16px;
+  font-size: 20px;
   background: none;
-  color: #5a6674;
-  width: 50vh;
+  color: #696969;
+  width: 70%;
+  left: 10%;
   height: 20px;
   border: none;
   appearance: none;
@@ -49,11 +58,12 @@
 }
 
 .suggestions {
-  border: 1px solid #fff;
-  border-top-width: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.20);
   list-style: none;
   margin-top: 0px;
-  max-height: 143px;
+  max-height: 150px;
   overflow-y: auto;
   padding-left: 0;
   text-align: left;
@@ -62,6 +72,7 @@
 .suggestions li {
   padding: 0.5rem;
   background-color: #fff;
+  height: 4vh;
 }
 
 .suggestions .suggestion-active,

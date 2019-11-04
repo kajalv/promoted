@@ -8,7 +8,7 @@ function App() {
   return (
     <Container className="App">
       <Row className="App-header">
-        <h1 className="App-title">Promot<span style={{color:"#c14953"}}>ED</span></h1>
+        <h1 className="App-title">Promot<span style={{color:"#5da9e9"}}>ED</span></h1>
         <SearchBar/>
       </Row>
     </Container>

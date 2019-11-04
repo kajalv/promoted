@@ -12,7 +12,9 @@ class SearchBar extends Component {
       activeSuggestion: 0,
       filteredSuggestions: [],
       showSuggestions: false,
-      userInput: ""
+      userInput: "",
+      search: false,
+      showFilters: false
     };
 
     this.suggestions = []
@@ -38,6 +40,7 @@ class SearchBar extends Component {
   };
 
   onClick = e => {
+    console.log("in click");
     // Update the user input and reset the rest of the state
     this.setState({
       activeSuggestion: 0,
@@ -48,12 +51,12 @@ class SearchBar extends Component {
   };
 
   onKeyDown = e => {
-    console.log("in keydown");
     const { activeSuggestion, filteredSuggestions } = this.state;
 
     // User pressed the enter key, update the input and close the
     // suggestions
     if (e.keyCode === 13) {
+      e.preventDefault(); // Have to prevent default or enter would reload the page
       this.setState({
         activeSuggestion: 0,
         showSuggestions: false,
@@ -70,32 +73,38 @@ class SearchBar extends Component {
     }
     // User pressed the down arrow, increment the index
     else if (e.keyCode === 40) {
-      console.log("in down arrow");
       if (activeSuggestion - 1 === filteredSuggestions.length) {
         return;
       }
-      
+
       this.setState({ activeSuggestion: activeSuggestion + 1 });
     }
   };
 
   componentDidMount() {
     this.suggestions=[
-          "Alligator",
-          "Bask",
-          "Crocodilian",
-          "Death Roll",
-          "Eggs",
-          "Jaws",
-          "Reptile",
-          "Solitary",
-          "Tail",
-          "Wetlands"
+          "Social Worker",
+          "Software Developer",
+          "Administrative Assistant",
+          "Bartender",
+          "Cashier",
+          "Delivery Driver",
+          "Human Resources",
+          "Interior Designer",
+          "Warehouse worker",
+          "Marketing"
         ]
   }
 
   render() {
-    let {showSuggestions, userInput, filteredSuggestions, activeSuggestion} = this.state
+    let {showSuggestions, userInput, filteredSuggestions, activeSuggestion, search, showFilters} = this.state
+
+    let filtersComponent;
+
+    if (showFilters) {
+
+    }
+
 
     let suggestionsListComponent;
 
@@ -121,6 +130,7 @@ class SearchBar extends Component {
                 </li>
               );
             })}
+
           </ul>
         );
       } else {
@@ -132,11 +142,11 @@ class SearchBar extends Component {
       }
     }
 
-
     return (
     <Container className="searchbar-container">
       <form className={"search-form" + ((showSuggestions && userInput)? " with-suggestions" : "")}>
-        <input type="search" value={this.state.userInput} onKeyDown={this.onKeyDown} onChange={this.onChange} placeholder="Search for your next career role" className="search-input"/>
+        <input type="text" value={this.state.userInput} onKeyDown={this.onKeyDown} onChange={this.onChange} placeholder="Search for your next career role" className="search-input"/>
+        <i className="fa fa-search fa-2x" id="searchBtn" aria-hidden="true"></i>
       </form>
 
       {suggestionsListComponent}
