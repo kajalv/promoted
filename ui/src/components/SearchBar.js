@@ -48,6 +48,7 @@ class SearchBar extends Component {
   };
 
   onKeyDown = e => {
+    console.log("in keydown");
     const { activeSuggestion, filteredSuggestions } = this.state;
 
     // User pressed the enter key, update the input and close the
@@ -69,10 +70,11 @@ class SearchBar extends Component {
     }
     // User pressed the down arrow, increment the index
     else if (e.keyCode === 40) {
+      console.log("in down arrow");
       if (activeSuggestion - 1 === filteredSuggestions.length) {
         return;
       }
-
+      
       this.setState({ activeSuggestion: activeSuggestion + 1 });
     }
   };
@@ -133,8 +135,8 @@ class SearchBar extends Component {
 
     return (
     <Container className="searchbar-container">
-      <form class="search-form">
-        <input type="search" value={this.state.userInput} onKeyDown={this.onKeyDown} onChange={this.onChange} placeholder="Search for your next career role" class="search-input"/>
+      <form className={"search-form" + ((showSuggestions && userInput)? " with-suggestions" : "")}>
+        <input type="search" value={this.state.userInput} onKeyDown={this.onKeyDown} onChange={this.onChange} placeholder="Search for your next career role" className="search-input"/>
       </form>
 
       {suggestionsListComponent}
