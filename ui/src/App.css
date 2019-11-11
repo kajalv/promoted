@@ -27,7 +27,11 @@
   font-size: calc(10px + 10vmin);
 }
 
-
+.Result-title {
+  color:#696969;
+  font-size: 40px;
+  align-self: center;
+}
 
 .App-search {
   width: 80vh;
