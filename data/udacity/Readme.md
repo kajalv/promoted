@@ -10,4 +10,5 @@ title
 level
 expected_duration
 expected_duration_unit
-required_knowledge
+skills
+is free course
