@@ -1,0 +1,12 @@
+#filters-title-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2vh;
+}
+
+#filters-title {
+  color:#696969;
+  font-size: calc(10px + 5vmin);
+  margin-left: 5vmin;
+}
