@@ -21,7 +21,8 @@ new_words = ["familiar", "experienced", "experience", "employment", "skill", "jo
 ,"mathworks", "null", "href", "attr", "healthcare", "xcybercx", "move", "comfortable", "must", "resume", "apply",
 "please", "right", "forward", "chef", "deere", "john", "receiving", "cisco", "click", "right", "palo", "princeton",
 "subvendor", "ntt", "cognizant", "later", "beacon", "hill", "caption", "title", "redwood", "city", "sunnyvale", "alto",
-"applicant", "eligibility", "inc", "law", "protected"]
+"applicant", "eligibility", "inc", "law", "protected", "src", "medium", "newjobs", "jpg", "cybercoders", "nonjob", "judge",
+"typically", "nasdaq","vmware", "building", "strong", "bachelor", "degree", "science", "related"]
 stop_words = stop_words.union(new_words)
 
 data_map = {}
@@ -29,9 +30,9 @@ data_map = {}
 for index, row in dataset.iterrows():
     title = row['job_title']
     if title in data_map:
-        data_map[title] += row['job_description']
+        data_map[title] += str(row['job_description'])
     else:
-        data_map[title] = row['job_description']
+        data_map[title] = str(row['job_description'])
 
 
 corpus = []
