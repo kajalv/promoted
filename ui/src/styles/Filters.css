@@ -10,3 +10,80 @@
   font-size: calc(10px + 5vmin);
   margin-left: 5vmin;
 }
+
+#goal-div {
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+
+}
+
+#filter-container {
+  height: 100vh;
+}
+
+#levelSelect {
+  color: #5da9e9;
+  border-bottom: 2px solid #5da9e9;
+}
+
+#levelSelect:hover {
+  cursor: pointer;
+}
+
+#levelOptions {
+  list-style: none;
+  margin-left: 6px;
+}
+
+#levelOptions li:hover {
+  color: #5da9e9;
+  cursor: pointer;
+}
+
+.levels-enter {
+  opacity: 0.01;
+  transform: scale(1.1);
+}
+
+.levels-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 100ms;
+}
+
+.levels-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.levels-exit-active {
+  opacity: 0.01;
+  transform: scale(1.1);
+  transition: all 100ms;
+}
+
+#filters .form-row, #filters .form-group{
+  width: 100%;
+}
+
+#filters .rc-slider {
+  width: 100%;
+}
+
+.rc-slider-track{
+  background-color: #5da9e9;
+}
+
+.rc-slider-handle, .rc-slider-handle:hover, .rc-slider-handle-click-focused {
+  border: 2px solid #5da9e9;
+}
+
+#filters {
+  height: 10vh;
+  margin-top: 2vmin;
+  display: flex;
+  flex-direction: row;
+}

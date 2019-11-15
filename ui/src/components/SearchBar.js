@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/SearchBar.css';
-import Container from 'react-bootstrap/Container';
+import { Redirect } from 'react-router-dom';
 
 //reference: https://alligator.io/react/react-autocomplete/
 
@@ -13,8 +13,7 @@ class SearchBar extends Component {
       filteredSuggestions: [],
       showSuggestions: false,
       userInput: "",
-      search: false,
-      showFilters: false
+      search: false
     };
 
     this.suggestions = []
@@ -46,7 +45,8 @@ class SearchBar extends Component {
       activeSuggestion: 0,
       filteredSuggestions: [],
       showSuggestions: false,
-      userInput: e.currentTarget.innerText
+      userInput: e.currentTarget.innerText,
+      search: true
     });
   };
 
@@ -60,7 +60,8 @@ class SearchBar extends Component {
       this.setState({
         activeSuggestion: 0,
         showSuggestions: false,
-        userInput: filteredSuggestions[activeSuggestion]
+        userInput: filteredSuggestions[activeSuggestion],
+        search:true
       });
     }
     // User pressed the up arrow, decrement the index
@@ -97,14 +98,14 @@ class SearchBar extends Component {
   }
 
   render() {
-    let {showSuggestions, userInput, filteredSuggestions, activeSuggestion, search, showFilters} = this.state
+    let {showSuggestions, userInput, filteredSuggestions, activeSuggestion,search} = this.state
 
-    let filtersComponent;
-
-    if (showFilters) {
-
+    if (search) {
+      return <Redirect to={{
+            pathname: '/filter',
+            query: userInput
+        }}/>
     }
-
 
     let suggestionsListComponent;
 
@@ -143,14 +144,14 @@ class SearchBar extends Component {
     }
 
     return (
-    <Container className="searchbar-container">
+    <div className="searchbar-container">
       <form className={"search-form" + ((showSuggestions && userInput)? " with-suggestions" : "")}>
         <input type="text" value={this.state.userInput} onKeyDown={this.onKeyDown} onChange={this.onChange} placeholder="Search for your next career role" className="search-input"/>
         <i className="fa fa-search fa-2x" id="searchBtn" aria-hidden="true"></i>
       </form>
 
       {suggestionsListComponent}
-    </Container>
+    </div>
     );
   }
 }

@@ -11,7 +11,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container className="App">
+      <Container className="App" fluid={true}>
         <Row className="App-header">
           <h1 className="App-title">Promot<span style={{color:"#5da9e9"}}>ED</span></h1>
           <SearchBar/>
