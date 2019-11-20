@@ -14,6 +14,12 @@ Then, since the Udemy API makes use of `[]` reserved characters, a shell script 
 sh get_ratings.sh
 ```
 
+To extract recommended courses, put the keywords in `in.txt` and run:
+
+```
+python3 keywords.py
+```
+
 ## API Information
 
 ### Courses
