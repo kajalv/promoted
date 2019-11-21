@@ -4,19 +4,11 @@ import csv
 import sys
 
 keywords_input="in.txt"
-dataset_file="dataset_with_ratings.csv"
+dataset_file="../data/udemy/dataset_with_ratings.csv"
 # each line:
 # id,title,url,is_paid,price,category,duration,instructional_level,rating
 
-def main():
-	keywords = []
-	# first open the keywords file and read all the words
-	with open(keywords_input, 'r', encoding='UTF-8', newline='') as f:
-		for line in csv.reader(f, delimiter=','):
-			for word in line:
-				word = word.strip(' \t\n\r\'')
-				keywords.append(word.lower())
-
+def udemy_reco(keywords):
 	# get all the courses which have keywords matching
 	suggestions = {}
 	with open(dataset_file, 'r', encoding='UTF-8', newline='') as f:
@@ -59,6 +51,26 @@ def main():
 	# print the course names
 	for course in sorted_suggestions:
 		print(course[1]["details"][1])
+
+def udacity_reco(keywords):
+	pass
+
+def edx_reco(keywords):
+	pass
+
+def main():
+	keywords = []
+	# first open the keywords file and read all the words
+	with open(keywords_input, 'r', encoding='UTF-8', newline='') as f:
+		for line in csv.reader(f, delimiter=','):
+			for word in line:
+				word = word.strip(' \t\n\r\'')
+				keywords.append(word.lower())
+
+	# get recommendations from each of the MOOC providers
+	udemy_reco(keywords)
+	udacity_reco(keywords)
+	edx_reco(keywords)
 
 if __name__ == "__main__":
 	main()
