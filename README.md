@@ -1,6 +1,9 @@
 # PromotED
 DVA project
 
+## Running the server
+
+> python server.py
 
 ## APIs
 
