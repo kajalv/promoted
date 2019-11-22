@@ -1,32 +1,32 @@
 title,level,expected_duration,expected_duration_unit,skills,free
 Self-Driving Fundamentals: Featuring Apollo,beginner, 4,week,Apollo HD Map|Localization|Perception|Prediction|Planning|Control,y
-Spark,intermediate, 10,hours,Spark|SparkSQL|Spark Dataframes|Data Wrangling|Machine Learning,y
-Tales from the Genome,beginner, 3,months,Genetics|DNA|Gene regulation,y
-Design of Computer Programs,advanced, 2,months,Computer Program Design|Python|Design Process,y
-Intro to Algorithms,intermediate, 4,months,Algorithms|Social Networks|Graph Algorithms,y
-Differential Equations in Action,intermediate, 2,months,Math|Differential Equations,y
-Software Testing,intermediate, 1,months,Software Testing|Debugging|Code Coverage,y
-Software Debugging,intermediate, 2,months,Debugging|Python|Automated Debugging,y
-Programming Languages,intermediate, 2,months,Introduciton to Programming Languages|Validate and Process Strings|HTML and JavaScript|Build your own web browser,y
-Intro to Artificial Intelligence,intermediate, 4,months,Artificial Intelligence|Machine Learning|Probability|Logic and Planning|Markov models,y
-Interactive 3D Graphics,intermediate, 2,months,Animated 3D Demo Program|Computer Image Generation|Programming Vertex and Pixel Shaders,y
-Intro to Theoretical Computer Science,intermediate, 2,months,theoretical computer science|NP-completeness|Recognizing algorithmic problems|Solving algorithmic problems,y
-Artificial Intelligence for Robotics,advanced, 2,months,Probabilistic Models|Kalman Filters|Motion Planning|Robot Control|Simultaneous Localization & Mapping,y
-Applied Cryptography,advanced, 2,months,Cryptography|Ciphers|Encryption,y
+Spark,intermediate, 1,week,Spark|SparkSQL|Spark Dataframes|Data Wrangling|Machine Learning,y
+Tales from the Genome,beginner, 12,weeks,Genetics|DNA|Gene regulation,y
+Design of Computer Programs,advanced, 8,weeks,Computer Program Design|Python|Design Process,y
+Intro to Algorithms,intermediate, 16,weeks,Algorithms|Social Networks|Graph Algorithms,y
+Differential Equations in Action,intermediate, 8,weeks,Math|Differential Equations,y
+Software Testing,intermediate, 4,weeks,Software Testing|Debugging|Code Coverage,y
+Software Debugging,intermediate, 8,weeks,Debugging|Python|Automated Debugging,y
+Programming Languages,intermediate, 8,weeks,Introduciton to Programming Languages|Validate and Process Strings|HTML and JavaScript|Build your own web browser,y
+Intro to Artificial Intelligence,intermediate, 16,weeks,Artificial Intelligence|Machine Learning|Probability|Logic and Planning|Markov models,y
+Interactive 3D Graphics,intermediate, 8,weeks,Animated 3D Demo Program|Computer Image Generation|Programming Vertex and Pixel Shaders,y
+Intro to Theoretical Computer Science,intermediate, 8,weeks,theoretical computer science|NP-completeness|Recognizing algorithmic problems|Solving algorithmic problems,y
+Artificial Intelligence for Robotics,advanced, 8,weeks,Probabilistic Models|Kalman Filters|Motion Planning|Robot Control|Simultaneous Localization & Mapping,y
+Applied Cryptography,advanced, 8,weeks,Cryptography|Ciphers|Encryption,y
 Intro to the Design of Everyday Things,beginner, 2,weeks,Design|Conceptual Models|UI|UX,y
-How to Build a Startup,intermediate, 1,months,Entrepreneurship|Value Proposition|Revenue Models|Customer Segments,y
-Intro Algebra Review,beginner, 2,months,Math|Algebra|Integers|Fractions and Decimals|Linear Equations,y
-Visualizing Algebra,beginner, 4,months,Math|Algebra|Modeling|Patterns|Factors,y
-College Algebra,beginner, 4,months,Algebra|Mathematical Expressions|Functions|Modeling,y
-Intro to Physics,beginner, 2,months,Kinematics|Dynamics|Trigonometry|Periodic Motion|Electricity,y
-Intro to Psychology,beginner, 4,months,Pyschology|Research Methods|Biology,y
-Statistics,beginner, 4,months,Statistical Research Methods|Data Visualization|Distributions|Hypothesis Testing|Regression,y
-Intro to Statistics,beginner, 2,months,Probability|Descriptive Statistics|Inferential Statistics,y
+How to Build a Startup,intermediate, 4,weeks,Entrepreneurship|Value Proposition|Revenue Models|Customer Segments,y
+Intro Algebra Review,beginner, 8,weeks,Math|Algebra|Integers|Fractions and Decimals|Linear Equations,y
+Visualizing Algebra,beginner, 16,weeks,Math|Algebra|Modeling|Patterns|Factors,y
+College Algebra,beginner, 16,weeks,Algebra|Mathematical Expressions|Functions|Modeling,y
+Intro to Physics,beginner, 8,weeks,Kinematics|Dynamics|Trigonometry|Periodic Motion|Electricity,y
+Intro to Psychology,beginner, 16,weeks,Pyschology|Research Methods|Biology,y
+Statistics,beginner, 16,weeks,Statistical Research Methods|Data Visualization|Distributions|Hypothesis Testing|Regression,y
+Intro to Statistics,beginner, 8,weeks,Probability|Descriptive Statistics|Inferential Statistics,y
 Intro to HTML and CSS,beginner, 3,weeks,HTML|CSS|CSS Syntax|HTML Syntax Problem Set,y
 Intro to Machine Learning,beginner, 1,week,Firebase|Android|Data Storage,y
-Data Wrangling with MongoDB,intermediate, 2,months,Gathering Data|Assessing Data|Cleaning Data|Data Wrangling|MongoDB,y
-Firebase in a Weekend: iOS,intermediate, 2,days,Android Development,y
-Firebase in a Weekend: Android,intermediate, 2,days,Android Development,y
+Data Wrangling with MongoDB,intermediate, 8,weeks,Gathering Data|Assessing Data|Cleaning Data|Data Wrangling|MongoDB,y
+Firebase in a Weekend: iOS,intermediate, 1,week,Android Development,y
+Firebase in a Weekend: Android,intermediate, 1,week,Android Development,y
 Full Stack Foundations,intermediate, 3,weeks,Flask|CRUD|Model-View-Controller|Python|Object-relational Mapping,y
 GT - Refresher - Advanced OS,intermediate, 3,weeks,Operating Systems|Virtual Memory|File Systems|Multithreaded Programming|Networking,y
 Machine Learning Interview Preparation,intermediate, 1,week,Interview practice|Machine Learning|Career Advancement,y
@@ -36,12 +36,12 @@ Objective-C for Swift Developers,intermediate, 5,weeks,iOS|Swift|Objective-C|Con
 Data Structures & Algorithms in Swift,intermediate, 4,weeks,Interview practice|Swift|Data structures|Career Advancement,y
 Introduction to Virtual Reality,beginner, 2,weeks,VR development|Unity|Google VR SDK for Unity|General understanding of how VR works|Deploying to Android and iOS,y
 VR Scenes and Objects,beginner, 2,weeks,VR development|Unity|Google VR SDK for Unity|Game Objects|Materials,y
-VR Software Development,beginner, 1,months,VR development|Unity|Google VR SDK for Unity|C#|UI interfaces and interaction,y
-Swift for Beginners,beginner, 7,days,Variables and Constants|Strings|Control Flow|Functions,y
-Swift for Developers,beginner, 7,days,Variables and Constants|Strings|Control Flow|Functions,y
-AutoLayout,intermediate, 6,days,Design|UI|Stack Views|Constraints,y
+VR Software Development,beginner, 4,weeks,VR development|Unity|Google VR SDK for Unity|C#|UI interfaces and interaction,y
+Swift for Beginners,beginner, 1,week,Variables and Constants|Strings|Control Flow|Functions,y
+Swift for Developers,beginner, 1,week,Variables and Constants|Strings|Control Flow|Functions,y
+AutoLayout,intermediate, 1,week,Design|UI|Stack Views|Constraints,y
 Passwordless Login Solutions for iOS,intermediate, 1,weeks,Account Kit|Facebook SDK|Graph API,y
-Continuous Integration and Deployment,intermediate, 2,days,Continuous Integration|BuddyBuild|Automated Testing,y
+Continuous Integration and Deployment,intermediate, 1,week,Continuous Integration|BuddyBuild|Automated Testing,y
 Server-Side Swift,intermediate, 2,weeks,Swift Package Manager|MySQL|Docker|Terraform|Microservices,y
 Mobile Design and Usability for iOS,intermediate, 2,weeks,Product Design|Prototyping,y
 Core ML: Machine Learning for iOS,intermediate, 1,weeks,iOS|Image Classification|Core ML,y
@@ -51,49 +51,49 @@ Intro to AJAX,intermediate, 2,weeks,Asynchronous requests with JavaScript|Data A
 Intro to Machine Learning,intermediate, 10,weeks,Machine Learning|Supervised Learning|Unsupervised Learning|Evaluation Metrics|Data Manipulation,y
 Version Control with Git,beginner, 4,weeks,Git|Version Control|Creating a Git repo|Editing commits,y
 Database Systems Concepts & Design,intermediate, 16,weeks,Database Management Systems|Relational Algebra|Sequential Query Language|Data Indexing|SQL Injection,y
-Intro to Point & Click App Development,beginner, 1,months,Salesforce App Development|Schema Building|Data Modeling,y
+Intro to Point & Click App Development,beginner, 4,weeks,Salesforce App Development|Schema Building|Data Modeling,y
 Embedded Systems,intermediate, 16,weeks,VLIW Architecture|Compilers for Embedded Systems|Differential Register Allocation|Network Processors|Multithreaded Processing,y
 Intro to Data Analysis,beginner, 6,weeks,Data Analysis|Python|numpy|pandas,y
 Intro to Backend,intermediate, 3,weeks,User Input|Producing templated output|Databases and data stores|Secure user account systems,y
-Introduction to TensorFlow Lite,intermediate, 2,months,TensorFlow Lite|Deep Learning Models|Android|iOS|Linux,y
-Intro to Deep Learning with PyTorch,intermediate, 2,months,Deep Learning|PyTorch|Neural Networks|CNNs|LSTMs|Style Transfer,y
+Introduction to TensorFlow Lite,intermediate, 8,weeks,TensorFlow Lite|Deep Learning Models|Android|iOS|Linux,y
+Intro to Deep Learning with PyTorch,intermediate, 8,weeks,Deep Learning|PyTorch|Neural Networks|CNNs|LSTMs|Style Transfer,y
 Advanced Operating Systems,advanced, 5,weeks,Operating System Kernels|Virtualization|Distributed Systems|Cloud Computing|Real-Time Operating Systems,y
 Intro to Relational Databases,intermediate, 4,weeks,Rational databases|SQL|Python API|Python DB-API|Select and insert statements,y
 Network Security,intermediate, 16,weeks,Cryptography|Systems Security|Distributed Denial of Service Attacks|Penetration Testing|Botnet Detection,y
-Intro to Inferential Statistics,beginner, 2,months,Inferential Statistics|Hypothesis Testing|T-tests|ANOVA,y
-Shell Workshop,beginner, 1,days,Shell|Using Terminal|Running command-line programs|Customizing Shell,y
+Intro to Inferential Statistics,beginner, 8,weeks,Inferential Statistics|Hypothesis Testing|T-tests|ANOVA,y
+Shell Workshop,beginner, 1,week,Shell|Using Terminal|Running command-line programs|Customizing Shell,y
 C++ For Programmers,intermediate, 3,weeks,Pointers and Arrays|Control Flow|Object Oriented Programming|C++ Templates|C++ Standard Library,y
 iOS Interview Prep,intermediate, 1,week,Interview practice|Common iOS Questions|Whiteboarding|Career Advancement,y
 Android Interview Prep,intermediate, 1,week,Interview practice|Common Android Questions|Whiteboarding,y
 Strengthen Your LinkedIn Network & Brand,beginner, 1,week,Personal branding|LinkedIn|Networking|Career Advancement,y
-Refresh Your Resume,beginner, 2,days,Resume writing|Company targeting|Storytelling|Career Advancement,y
-Craft Your Cover Letter,beginner, 1,day,Creating a narrative|Targeting your pitch|Communicating value|Career Advancement,y
-Intro to jQuery,intermediate, 2,days,jQuery|DOM Structure|Reading jQuery documentation|Modify HTML attributes and content,y
+Refresh Your Resume,beginner, 1,week,Resume writing|Company targeting|Storytelling|Career Advancement,y
+Craft Your Cover Letter,beginner, 1,week,Creating a narrative|Targeting your pitch|Communicating value|Career Advancement,y
+Intro to jQuery,intermediate, 1,week,jQuery|DOM Structure|Reading jQuery documentation|Modify HTML attributes and content,y
 Front-End Interview Prep,intermediate, 1,week,Interview questions|Common FE Questions|Whiteboarding|Career Advancement,y
 VR Interview Prep,intermediate, 1,week,Interview practice|Common VR Questions|Whiteboarding|Career Advancement,y
 Full-Stack Interview Prep,intermediate, 1,week,Interview practice|Common FS Questions|Whiteboarding|Career Advancement,y
 Networking for Web Developers,beginner, 2,weeks,HTTP|Domain Name System|Ping|TCP/IP stack|IP addressing,y
-A/B Testing,intermediate, 1,months,A/B Testing|Experiment Design|Statistics,y
-Machine Learning,intermediate, 4,months,Supervised Learning|Unsupervised Learning|Information Theory|Reinforcement Learning|Game Theory,y
+A/B Testing,intermediate, 4,weeks,A/B Testing|Experiment Design|Statistics,y
+Machine Learning,intermediate, 16,weeks,Supervised Learning|Unsupervised Learning|Information Theory|Reinforcement Learning|Game Theory,y
 Dynamic Web Applications with Sinatra,intermediate, 2,weeks,Ruby|Sinatra|Building web applications,y
 The MVC Pattern in Ruby,intermediate, 1,weeks,Ruby|Sinatra|MVC Design Pattern|Writing organized code,y
 Deploying Applications with Heroku,intermediate, 1,weeks,App Deployment|Heroku,y
 Cyber-Physical Systems Security,intermediate, 16,weeks,Industrial Networks|Industrial Control Systems|Smart Grid Infrastructure|Cyber Security|Privacy,y
-High Performance Computing,advanced, 4,months,Shared Memory Models|Parallel Algorithms|Distributed Memory Models|Message Passing Interfaces|Hierarchical Memory Models,y
+High Performance Computing,advanced, 16,weeks,Shared Memory Models|Parallel Algorithms|Distributed Memory Models|Message Passing Interfaces|Hierarchical Memory Models,y
 Java Programming Basics,beginner, 6,weeks,Java Programming|Java Syntax|Java Functions|Loops,y
 Object Oriented Programming in Java,intermediate, 4,weeks,Object Oriented Programming|Java|User Interaction,y
 HTML5 Canvas,beginner, 2,weeks,HTML5 Canvas|Canvas2D|Creating animation,y
 Configuring Linux Web Servers,advanced, 1,weeks,Linux|Linux security|Apache HTTP Server|PostgreSQL database server|Python WSGI application,y
 HTTP & Web Servers,intermediate, 1,weeks,HTTP|Python|Deploying services,y
-iOS Persistence and Core Data,advanced, 2,months,Data Persistence|Core Data|UserDefaults|FileManager,y
+iOS Persistence and Core Data,advanced, 8,weeks,Data Persistence|Core Data|UserDefaults|FileManager,y
 Authentication & Authorization: OAuth,intermediate, 2,weeks,Flask|OAuth 2.0|Authentication & Authorization|Python,y
 Software Analysis & Testing,intermediate, 16,weeks,Software Testing|Debugging|Dataflow Analysis|Constraint-based Analysis|Symbolic Execution,y
-Firebase Analytics: iOS,intermediate, 1,days,Android Development|Firebase Analytics|Firebase Crash Reporting|Firebase Remote Config|Firebase Dynamic Links,y
-Firebase Analytics: Android,intermediate, 2,days,Android Development|Firebase|Analytics,y
+Firebase Analytics: iOS,intermediate, 1,week,Android Development|Firebase Analytics|Firebase Crash Reporting|Firebase Remote Config|Firebase Dynamic Links,y
+Firebase Analytics: Android,intermediate, 1,week,Android Development|Firebase|Analytics,y
 ES6 - JavaScript Improved,advanced, 4,weeks,JavaScript|ES6|Syntax|Functions,y
 Passwordless Login Solutions for Android,intermediate, 1,weeks,Android|Passwordless Login|Account Kit,y
 Mobile Design and Usability for Android,intermediate, 2,weeks,Android|Mobile Design|Usability,y
-Intro to Data Science,intermediate, 2,months,Data Analysis Process|pandas (Python package)|MapReduce paradigm,y
+Intro to Data Science,intermediate, 8,weeks,Data Analysis Process|pandas (Python package)|MapReduce paradigm,y
 Real-Time Analytics with Apache Storm,intermediate, 2,weeks,Data Analysis|Real-time Analytics|Apache Storm,y
 Designing RESTful APIs,intermediate, 3,weeks,Flask|REST APIs|Python,y
 Human-Computer Interaction,intermediate, 16,weeks,Design Principles|Direct Manipulation Interfaces|Mental Models|Distributed Cognition|Prototyping,y
@@ -102,52 +102,52 @@ Data Analysis and Visualization,intermediate, 16,weeks,R|Data Analysis|Data Visu
 How to Make a Platformer Using libGDX,intermediate, 8,weeks,LibGDX|Game Development|Asset management,y
 Engagement & Monetization | Mobile Games,beginner, 3,weeks,Game Development|Monetization|Engagement,y
 Knowledge-Based AI: Cognitive Systems,advanced, 7,weeks,Semantic Networks|Common-Sense Reasoning|Logic & Planning|Analogical Reasoning|Visuospatial Reasoning,y
-iOS Networking with Swift,advanced, 3,months,Networking|URLSession|JSON Parsing,y
-Computer Networking,intermediate, 3,months,Software-Defined Networking|Data Center Networking|Content Distribution|Congestion Control|Traffic Shaping,y
-Machine Learning for Trading,intermediate, 4,months,Pandas|Time Series Analysis|Computational Investing|Algorithmic Trading|Reinforcement Learning for Trading,y
+iOS Networking with Swift,advanced, 12,weeks,Networking|URLSession|JSON Parsing,y
+Computer Networking,intermediate, 12,weeks,Software-Defined Networking|Data Center Networking|Content Distribution|Congestion Control|Traffic Shaping,y
+Machine Learning for Trading,intermediate, 16,weeks,Pandas|Time Series Analysis|Computational Investing|Algorithmic Trading|Reinforcement Learning for Trading,y
 Data Visualization and D3.js,intermediate, 7,weeks,d3.js|Design of Visualizations|Data Visualization|Visual Encodings,y
-Product Design,intermediate, 2,months,Product Design|Design Sprints|Ideation and Validation|UI/UX,y
+Product Design,intermediate, 8,weeks,Product Design|Design Sprints|Ideation and Validation|UI/UX,y
 Intro to Data Structures and Algorithms,intermediate, 4,weeks,Interview practice|Python|Data structures and Algorithms|Career Advancement,y
-App Monetization,intermediate, 1,months,Product Design|Google Analytics,y
+App Monetization,intermediate, 4,weeks,Product Design|Google Analytics,y
 JavaScript Testing,intermediate, 2,weeks,Javascript Apps|Jasmine testing framework|red-green-refactor workflow,y
 Grand Central Dispatch (GCD),intermediate, 2,weeks,Closures|GCD,y
-Intro to iOS App Development with Swift,intermediate, 1,months,Swift|UIKit|AVFoundation,y
+Intro to iOS App Development with Swift,intermediate, 4,weeks,Swift|UIKit|AVFoundation,y
 Linux Command Line Basics,beginner, 1,weeks,Command line interface (Linux server)|Terminal and Shell (GNU Bash)|Linux filesystem|Shell commands,y
-Reinforcement Learning,advanced, 4,months,Temporal Difference Learning|Value Iteration|Policy Iteration|Reward Shaping|Game Theory,y
-How to Make an iOS App,advanced, 3,months,iOS|Ideation and Research|UI|App Store,y
+Reinforcement Learning,advanced, 16,weeks,Temporal Difference Learning|Value Iteration|Policy Iteration|Reward Shaping|Game Theory,y
+How to Make an iOS App,advanced, 12,weeks,iOS|Ideation and Research|UI|App Store,y
 Localization Essentials,beginner, 2,weeks,Localization|Google Translator Toolkit|Localization at Google,y
 Intro to DevOps,advanced, 3,weeks,DevOps|CAMS principles|Continuous Integration|Delivery workflows,y
-Scalable Microservices with Kubernetes,intermediate, 1,months,Microservices|Docker|Kubernetes|Deploying Microservices,y
-Intro to Hadoop and MapReduce,intermediate, 1,months,Big Data|Hadoop|MapReduce,y
-Data Analysis with R,intermediate, 2,months,R|Exploratory Data Analysis|Data Visualization,y
+Scalable Microservices with Kubernetes,intermediate, 4,weeks,Microservices|Docker|Kubernetes|Deploying Microservices,y
+Intro to Hadoop and MapReduce,intermediate, 4,weeks,Big Data|Hadoop|MapReduce,y
+Data Analysis with R,intermediate, 8,weeks,R|Exploratory Data Analysis|Data Visualization,y
 Object-Oriented JavaScript,intermediate, 3,weeks,Object Oriented Javascript|Object-oriented programming|Data and functionality|Prototypal inheritance,y
 App Marketing,intermediate, 2,weeks,App Marketing|User Segmentation|Customer Acquisition,y
 Rapid Prototyping,intermediate, 3,weeks,Prototyping|User Research|inVision,y
-Machine Learning: Unsupervised Learning,intermediate, 1,months,Randomized Optimization|Clustering|Feature Selection|Feature Transformation|Information Theory,y
+Machine Learning: Unsupervised Learning,intermediate, 4,weeks,Randomized Optimization|Clustering|Feature Selection|Feature Transformation|Information Theory,y
 Xcode Debugging,advanced, 3,weeks,Debugging|LLDB,y
-Writing READMEs,beginner, 3,days,README|Markdown|Making code easier to read,y
-UIKit Fundamentals,intermediate, 2,months,AutoLayout|Navigation|Table Views|Collection Views,y
+Writing READMEs,beginner, 1,week,README|Markdown|Making code easier to read,y
+UIKit Fundamentals,intermediate, 8,weeks,AutoLayout|Navigation|Table Views|Collection Views,y
 How to create <anything> in Android,beginner, 4,weeks,Android|UI|App Development,y
 Intro to JavaScript,beginner, 2,weeks,JavaScript|Conditionals|Loops|Data Types & Variables,y
-Software Development Process,intermediate, 3,months,Software Development Life Cycle|Requirements Engineering|Design Patterns|Black-Box & White-Box Testing|Agile Development Methodology,y
+Software Development Process,intermediate, 12,weeks,Software Development Life Cycle|Requirements Engineering|Design Patterns|Black-Box & White-Box Testing|Agile Development Methodology,y
 Get Your Startup Started,intermediate, 3,weeks,Entrepreneurship|Bootstrapping,y
-How to Install Android Studio,beginner, 1,day,Android|Android Studio|Java,y
+How to Install Android Studio,beginner, 1,week,Android|Android Studio|Java,y
 Health Informatics in the Cloud,beginner, 5,weeks,Health Information Exchange|Security and Trust|Interoperability Standards|Data Collection & Visualization,y
-Introduction to Computer Vision,intermediate, 4,months,Image Processing|Stereo Geometry|Feature Detection & Matching|Object Tracking|Classification & Recognition,y
+Introduction to Computer Vision,intermediate, 16,weeks,Image Processing|Stereo Geometry|Feature Detection & Matching|Object Tracking|Classification & Recognition,y
 Intro to Progressive Web Apps,intermediate, 2,weeks,Progressive Web Apps|Service Workers|Web App Manifest|Offline apps,y
-Software Architecture & Design,intermediate, 2,months,Unified Modeling Language|Object Constraint Language|Software Architecture|Software Design|Code Review,y
+Software Architecture & Design,intermediate, 8,weeks,Unified Modeling Language|Object Constraint Language|Software Architecture|Software Design|Code Review,y
 Android Performance,advanced, 4,weeks,Android Development|Performance|Optimization,y
-Intro to Descriptive Statistics,beginner, 2,months,Descriptive Statistics|Estimation|Central Limit Theorem,y
+Intro to Descriptive Statistics,beginner, 8,weeks,Descriptive Statistics|Estimation|Central Limit Theorem,y
 Android Basics: User Interface,beginner, 2,weeks,Android Development|Building Layouts|Android Studio|Views and ViewGroups|Styling,y
 Android Basics: User Input,beginner, 4,weeks,Android Development|Java|Object Oriented Programming|Conditional Code|Methods|Variables,y
-Android Basics: Multiscreen Apps,beginner, 2,months,Android Development|Intents and Activities|Data|Loops and Custom Classes|Images and Visual Polish|Audio and Libraries,y
+Android Basics: Multiscreen Apps,beginner, 8,weeks,Android Development|Intents and Activities|Data|Loops and Custom Classes|Images and Visual Polish|Audio and Libraries,y
 Android Basics: Networking,beginner, 5,weeks,Android Development|JSON Parsing|HTTP Networking|Threads and Parallelism|Control Flow and Conditionals|Preferences,y
 Android Basics: Data Storage,beginner, 8,weeks,Android Development|SQLite|ContentProvider|CursorAdapter & CursorLoader|Database|Design,y
 UX Design for Mobile Developers,beginner, 6,weeks,Android|UX Design|User-Centered Design,y
-Developing Android Apps,intermediate, 60,hours,Android Development|Layouts|Intents|UI,y
+Developing Android Apps,intermediate, 1,week,Android Development|Layouts|Intents|UI,y
 Advanced Android App Development,advanced, 6,weeks,Android Development|Fragments|Libraries|Firebase|Espresso,y
 Developing Scalable Apps in Python,advanced, 6,weeks,App Engine|Cloud Endpoints|API services|Client libraries,y
-Browser Rendering Optimization,advanced, 1,months,Browser Rendering Response|Animation|Idle and Load (RAIL)|Optimizing JavaScript|How to debug an app,y
+Browser Rendering Optimization,advanced, 4,weeks,Browser Rendering Response|Animation|Idle and Load (RAIL)|Optimizing JavaScript|How to debug an app,y
 Material Design for Android Developers,intermediate, 4,weeks,Android Development|Material Design|Surfaces|Graphic Design,y
 Google Maps APIs,intermediate, 2,weeks,Google Maps APIs|Static Maps|Street View imagery|monitoring API usage,y
 Gradle for Android and Java,advanced, 6,weeks,Android Development|Gradle|Java,y
@@ -160,7 +160,7 @@ Add Google Sign-In to your Android Apps,intermediate, 2,weeks,Android|Google Sig
 Responsive Images,intermediate, 2,weeks,Responsive Images|Mobile Image debugging|Creating responsive graphics,y
 Website Performance Optimization,intermediate, 1,weeks,Chrome Developer Tools|DOM and CSSOM|Critical Rendering Path HTML|CSS and JavaScript optimizations,y
 Kotlin for Android Developers,advanced, 1,weeks,Kotlin|Android,y
-Advanced Android with Kotlin,intermediate, 2,months,Kotlin|Android,y
+Advanced Android with Kotlin,intermediate, 8,weeks,Kotlin|Android,y
 Building High Conversion Web Forms,intermediate, 2,weeks,Research HTML5 input types|Datalist input|User input validation with HTML5 attributes|Validate user input using JavaScript|Optimizing forms,y
 Web Accessibility,advanced, 2,weeks,Accessibility|Screen Readers|Focus|Semantics|ARIA,y
 Web Tooling & Automation,intermediate, 3,weeks,Installing Sublime Text|Installing Plugins|Gulp|Live Editing|ESLint,y
@@ -170,16 +170,16 @@ Client-Server Communication,advanced, 5,weeks,HTTP request and response cycle|HT
 JavaScript Promises,advanced, 3,weeks,Native JavaScript Promises|Asynchronous code|Advanced error handling|Generating sequences of async work,y
 Offline Web Applications,intermediate, 3,weeks,Developing offline-first applications|Understanding Lie-Fi|Service Worker DevTools|IndexedDB|IndexedDB asset caching,y
 Kotlin Bootcamp for Programmers,intermediate, 2,weeks,Android Development,y
-Developing Android Apps with Kotlin,intermediate, 2,months,Android Development,y
+Developing Android Apps with Kotlin,intermediate, 8,weeks,Android Development,y
 Learn Swift Programming Syntax,intermediate, 3,weeks,Variables and Constants|Control Flow|Functions|Optionals|OOP,y
 Build Native Mobile Apps with Flutter,intermediate, 2,weeks,Android Development,y
 Educational Technology,beginner, 16,weeks,Educational Technology & Research|Online Learning|Game-based Learning|Communities of Practice|Ethics & Privacy in EdTech,y
 Model Building and Validation,advanced, 8,weeks,Questioning|Modeling|Validation|Data Analysis|QMV Process,y
-Introduction to Operating Systems,intermediate, 2,months,Processes & Threads|Memory Management|Inter-Process Communication|Resource Virtualization|Distributed File Systems,y
+Introduction to Operating Systems,intermediate, 8,weeks,Processes & Threads|Memory Management|Inter-Process Communication|Resource Virtualization|Distributed File Systems,y
 Data Science Interview Prep,intermediate, 1,week,Interview practice|Common Data Questions|Data Structures|Career Advancement,y
-Linear Algebra Refresher Course,intermediate, 4,months,Algebra|Python|Vectors|Intersections,y
-Artificial Intelligence,intermediate, 4,months,Artificial Intelligence|Probability|Bayesian Networks|Logic and Planning|Machine Learning,y
-Computational Photography,intermediate, 4,months,Digital Imaging|Panorama & Morphing|Light Field|High Dynamic Range|Video Stabilization,y
+Linear Algebra Refresher Course,intermediate, 16,weeks,Algebra|Python|Vectors|Intersections,y
+Artificial Intelligence,intermediate, 16,weeks,Artificial Intelligence|Probability|Bayesian Networks|Logic and Planning|Machine Learning,y
+Computational Photography,intermediate, 16,weeks,Digital Imaging|Panorama & Morphing|Light Field|High Dynamic Range|Video Stabilization,y
 Problem Solving with Advanced Analytics,beginner, 2,weeks,Linear Regression,y
 Creating an Analytical Dataset,beginner, 2,weeks,Data Issues|Data Formatting|Data Blending,y
 Classification Models,intermediate, 2,weeks,Binary Classication Models|Non-Binary Classification Models,y

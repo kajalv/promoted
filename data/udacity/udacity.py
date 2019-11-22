@@ -24,6 +24,12 @@ for course in course_list:
     if not course["expected_duration_unit"]:
         continue
     course_expected_duration_unit = course["expected_duration_unit"]
+    if course_expected_duration_unit == "days" or course_expected_duration_unit == "hours" or course_expected_duration_unit == "day":
+        course_expected_duration = 1
+        course_expected_duration_unit = "week"
+    elif course_expected_duration_unit == "months" :
+        course_expected_duration *= 4
+        course_expected_duration_unit = "weeks"
     #course_required_knowledge = course["required_knowledge"]
     # course_summary = course["summary"].rstrip("\n\r").replace(",", "").replace("\n+", "")
     # course_summary = course_summary.replace("<p>", "").replace("</p>", "")
