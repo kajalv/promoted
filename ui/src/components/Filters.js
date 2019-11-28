@@ -52,12 +52,19 @@ class Filters extends Component {
 
   getPriceRange = (data, levels) => {
     let minP = Number.MAX_SAFE_INTEGER, maxP = 0;
+    let modified = false
     for (var i = 0; i < data.length; i++) {
       if (levels.has(this.mappedCourseLevel(data[i].level))) {
-
+        modified = true
         minP = Math.min(minP, data[i].price)
         maxP = Math.max(maxP, data[i].price)
       }
+    }
+    if (!modified) {
+      return {
+        min:  0,
+        max:  0
+      };
     }
     return {
       min: Math.round(minP),
@@ -118,6 +125,7 @@ class Filters extends Component {
             && this.state.levels.has(this.mappedCourseLevel(course.level)))
           currentData.push(course);
     }
+    currentData = currentData.slice(0, this.state.duration)
     return currentData;
   }
 
@@ -147,9 +155,9 @@ class Filters extends Component {
   render() {
     let currentData = this.getCurrentData();
     let coursesDataJSX = [];
-    if (currentData.length%2 != 0) {
-      currentData = currentData.slice(0, currentData.length-1)
-    }
+    // if (currentData.length%2 != 0) {
+    //   currentData = currentData.slice(0, currentData.length-1)
+    // }
     for (var i = 0; i < currentData.length; i+=2) {
       coursesDataJSX.push(
         <Row key={i}>
@@ -167,7 +175,7 @@ class Filters extends Component {
               </Card.Text>
             </Card.Body>
           </Card>
-          <Card>
+          {i+1 < currentData.length ? (<Card>
             <Card.Header>{currentData[i+1].site}</Card.Header>
             <Card.Body>
               <Card.Title>{currentData[i+1].title}</Card.Title>
@@ -178,7 +186,7 @@ class Filters extends Component {
                 Price: ${currentData[i+1].price}
               </Card.Text>
             </Card.Body>
-          </Card>
+          </Card>) : null}
           </CardDeck>
         </Col>
       </Row>)
