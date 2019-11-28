@@ -79,11 +79,32 @@ class Filters extends Component {
     });
   }
 
+  mappedCourseLevel(level) {
+    let allLevels = ["beginner", "intermediate", "advanced"]
+    return allLevels[level];
+  }
+
+  getCurrentData() {
+    let displayCount = 10;
+    let currentData = [];
+    for(let index = 0; index < this.state.allData.length; index++) {
+      if (currentData.length >= displayCount)
+        break;
+      let course = this.state.allData[index];
+      if (course.duration <= this.state.duration
+            && course.price >= this.state.minPrice
+            && course.price <= this.state.maxPrice
+            && this.state.levels.has(this.mappedCourseLevel(course.level)))
+          currentData.push(course);
+    }
+    return currentData;
+  }
+
   componentDidMount() {
     let {min, max} = this.getPriceRange();
     let {minD, maxD} = this.getDurationRange();
-    //let url = 'http://localhost:5000/get_courses?job_title=' + this.props.location.query;
-    let url = 'http://localhost:5000/get_courses?job_title=' + "Software Developer";
+    let url = 'http://localhost:5000/get_courses?job_title=' + this.props.location.query;
+    //let url = 'http://localhost:5000/get_courses?job_title=' + "Software Developer";
     fetch(url, {
                 method: 'GET',
                 headers: {
@@ -92,7 +113,6 @@ class Filters extends Component {
             }).then(response => response.json())
             .then(data => {
                 console.log(data);
-                let currentData = data.slice(0,10);
                 this.setState({
                   priceRange:[min, max],
                   minPrice: min,
@@ -100,13 +120,13 @@ class Filters extends Component {
                   durationRange :[minD, maxD],
                   duration: maxD,
                   allData: data,
-                  currentData: currentData
                 });
             });
   }
 
   render() {
-    let coursesDataJSX = this.state.currentData.map(course =>
+    let currentData = this.getCurrentData();
+    let coursesDataJSX = currentData.map(course =>
       <Row>
         <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
           <Card>
@@ -122,6 +142,7 @@ class Filters extends Component {
         </Col>
       </Row>
     );
+
     return (
       <Container id="filter-container" fluid={true}>
         <Row>
