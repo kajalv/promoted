@@ -5,6 +5,11 @@ DVA project
 
 > python server.py
 
+## Running the UI
+
+> yarn install # if you did a git pull  
+> yarn start
+
 ## APIs
 
 The client uses the below GET API to get the courses for a specified job title.
