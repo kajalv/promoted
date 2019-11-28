@@ -10,6 +10,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { withRouter } from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import CardDeck from 'react-bootstrap/CardDeck';
 
 import '../styles/Filters.css';
 
@@ -145,24 +146,44 @@ class Filters extends Component {
 
   render() {
     let currentData = this.getCurrentData();
-    let coursesDataJSX = currentData.map(course =>
-      <Row key={course.title}>
+    let coursesDataJSX = [];
+    if (currentData.length%2 != 0) {
+      currentData = currentData.slice(0, currentData.length-1)
+    }
+    for (var i = 0; i < currentData.length; i+=2) {
+      coursesDataJSX.push(
+        <Row key={i}>
         <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
+        <CardDeck>
           <Card>
-            <Card.Header>{course.site}</Card.Header>
+            <Card.Header>{currentData[i].site}</Card.Header>
             <Card.Body>
-              <Card.Title>{course.title}</Card.Title>
+              <Card.Title>{currentData[i].title}</Card.Title>
               <Card.Text>
-                Duration : {course.duration} weeks
+                Duration : {currentData[i].duration} weeks
               </Card.Text>
               <Card.Text>
-                Price: ${course.price}
+                Price: ${currentData[i].price}
               </Card.Text>
             </Card.Body>
           </Card>
+          <Card>
+            <Card.Header>{currentData[i+1].site}</Card.Header>
+            <Card.Body>
+              <Card.Title>{currentData[i+1].title}</Card.Title>
+              <Card.Text>
+                Duration : {currentData[i+1].duration} weeks
+              </Card.Text>
+              <Card.Text>
+                Price: ${currentData[i+1].price}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          </CardDeck>
         </Col>
-      </Row>
-    );
+      </Row>)
+    }
+
 
     return (
       <Container id="filter-container" fluid={true}>
@@ -177,7 +198,7 @@ class Filters extends Component {
         <Row style={{marginTop:"2vmin"}}>
           <Col md={{span:8, offset:2}}>
             <div id="goal-div">
-              <h3>Curriculum for: <span style={{color:"#5da9e9"}}>{this.props.location.query}</span></h3>
+              <h3>Results for: <span style={{color:"#5da9e9"}}>{this.props.location.query}</span></h3>
             </div>
           </Col>
         </Row>
