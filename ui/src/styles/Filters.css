@@ -87,3 +87,16 @@
   display: flex;
   flex-direction: row;
 }
+
+.card-header {
+  background-color: #5da9e9;
+  color: white;
+}
+
+.card {
+  border-color: #5da9e9;
+}
+
+#backBtn a {
+  color: white;
+}

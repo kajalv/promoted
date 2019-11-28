@@ -83,18 +83,17 @@ class SearchBar extends Component {
   };
 
   componentDidMount() {
-    this.suggestions=[
-          "Social Worker",
-          "Software Developer",
-          "Administrative Assistant",
-          "Bartender",
-          "Cashier",
-          "Delivery Driver",
-          "Human Resources",
-          "Interior Designer",
-          "Warehouse worker",
-          "Marketing"
-        ]
+    fetch("http://localhost:5000/get_jobs",
+          {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+          }})
+          .then(response => response.json())
+          .then(data => {
+            this.suggestions = data.slice(0)
+          })
+
   }
 
   render() {

@@ -11,7 +11,7 @@ edx_file="./data/edx/dataset_edx.csv"
 def format_udemy(line):
 	course = {}
 	course['title'] = line[1]
-	course['site'] = "udemy"
+	course['site'] = "Udemy"
 	course['duration'] = 1 # all courses seems to take only a couple of days
 	course['duration_unit'] = "week"
 	if line[3] == 'TRUE':
@@ -73,7 +73,7 @@ def udemy_reco(keywords, file):
 def format_udacity(line):
 	course = {}
 	course['title'] = line[0]
-	course['site'] = "udacity"
+	course['site'] = "Udacity"
 	course['duration'] = int(line[2].strip()) # all courses seems to take only a couple of days
 	course['duration_unit'] = "week"
 	course['price'] = 0.0
@@ -126,7 +126,7 @@ def udacity_reco(keywords, file):
 def format_edx(line):
 	course = {}
 	course['title'] = line[0]
-	course['site'] = "edx"
+	course['site'] = "edX"
 	course['duration'] = int(line[2].strip()) # all courses seems to take only a couple of days
 	course['duration_unit'] = "week"
 	course['price'] = float(line[5])

@@ -22,5 +22,16 @@ def get_courses():
 
     return  jsonify(course_list), 200
 
+@app.route('/get_jobs', methods=["GET"])
+def get_jobs():
+    jobs = []
+    with open("./data/jobs-data/job_skills_keywords.csv", 'r') as f:
+        for line in csv.reader(f, delimiter=','):
+            if line[1] == "job_title":
+                continue
+            jobs.append(line[1])
+
+    return jsonify(jobs), 200
+
 if __name__ == "__main__":
     app.run(debug=False)

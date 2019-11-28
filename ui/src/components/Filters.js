@@ -7,6 +7,9 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import { withRouter } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import '../styles/Filters.css';
 
@@ -25,24 +28,39 @@ class Filters extends Component {
       priceRange:[],
       durationRange:[],
       duration: -1,
-      //level: this.props.location.query.includes("Senior") ? "Intermediate" : "Beginner"
-      levels: new Set(["beginner"]),
+      levels: this.props.location.query.includes("Senior") ? new Set(["intermediate"]) : new Set(["beginner"]),
+      //levels: new Set(["beginner"]),
       allData: [],
       currentData: []
     }
   }
 
-  getDurationRange = () => {
-    return {
-      minD: 1,
-      maxD: 12
+  getDurationRange = (data, levels) => {
+    let minD = Number.MAX_SAFE_INTEGER, maxD = 0;
+    for (var i = 0; i < data.length; i++) {
+      if (levels.has(this.mappedCourseLevel(data[i].level))) {
+        minD = Math.min(minD, data[i].duration)
+        maxD = Math.max(maxD, data[i].duration)
+      }
     }
+    return {
+      minD: minD,
+      maxD: maxD
+    };
   }
 
-  getPriceRange = () => {
+  getPriceRange = (data, levels) => {
+    let minP = Number.MAX_SAFE_INTEGER, maxP = 0;
+    for (var i = 0; i < data.length; i++) {
+      if (levels.has(this.mappedCourseLevel(data[i].level))) {
+
+        minP = Math.min(minP, data[i].price)
+        maxP = Math.max(maxP, data[i].price)
+      }
+    }
     return {
-      min: 0,
-      max: 100
+      min: Math.round(minP),
+      max: Math.round(maxP)
     };
   }
 
@@ -50,12 +68,6 @@ class Filters extends Component {
     this.setState({
       minPrice: value[0],
       maxPrice: value[1]
-    });
-  }
-
-  showLevelOptions = () => {
-    this.setState({
-      showLevelOptions: !this.state.showLevelOptions
     });
   }
 
@@ -68,8 +80,16 @@ class Filters extends Component {
     } else {
       levels.add(level);
     }
+
+    let {min, max} = this.getPriceRange(this.state.allData, levels)
+    let {minD, maxD} = this.getDurationRange(this.state.allData, levels)
     this.setState({
-      levels:levels
+      levels:levels,
+      priceRange:[min, max],
+      minPrice: min,
+      maxPrice: max,
+      durationRange :[minD, maxD],
+      duration: maxD
     });
   }
 
@@ -88,8 +108,8 @@ class Filters extends Component {
     let displayCount = 10;
     let currentData = [];
     for(let index = 0; index < this.state.allData.length; index++) {
-      if (currentData.length >= displayCount)
-        break;
+      // if (currentData.length >= displayCount)
+      //   break;
       let course = this.state.allData[index];
       if (course.duration <= this.state.duration
             && course.price >= this.state.minPrice
@@ -101,10 +121,8 @@ class Filters extends Component {
   }
 
   componentDidMount() {
-    let {min, max} = this.getPriceRange();
-    let {minD, maxD} = this.getDurationRange();
-    let url = 'http://localhost:5000/get_courses?job_title=' + this.props.location.query;
-    //let url = 'http://localhost:5000/get_courses?job_title=' + "Software Developer";
+    let url = 'http://localhost:5000/get_courses?job_title=' + (this.props.location.query.includes("Senior")? this.props.location.query.substring(7) : this.props.location.query);
+
     fetch(url, {
                 method: 'GET',
                 headers: {
@@ -112,14 +130,15 @@ class Filters extends Component {
                 }
             }).then(response => response.json())
             .then(data => {
-                console.log(data);
+                let {min, max} = this.getPriceRange(data, this.state.levels);
+                let {minD, maxD} = this.getDurationRange(data, this.state.levels);
                 this.setState({
                   priceRange:[min, max],
                   minPrice: min,
                   maxPrice: max,
                   durationRange :[minD, maxD],
                   duration: maxD,
-                  allData: data,
+                  allData: data
                 });
             });
   }
@@ -127,7 +146,7 @@ class Filters extends Component {
   render() {
     let currentData = this.getCurrentData();
     let coursesDataJSX = currentData.map(course =>
-      <Row>
+      <Row key={course.title}>
         <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
           <Card>
             <Card.Header>{course.site}</Card.Header>
@@ -136,8 +155,10 @@ class Filters extends Component {
               <Card.Text>
                 Duration : {course.duration} weeks
               </Card.Text>
+              <Card.Text>
+                Price: ${course.price}
+              </Card.Text>
             </Card.Body>
-            <Card.Footer className="text-muted">${course.price}</Card.Footer>
           </Card>
         </Col>
       </Row>
@@ -149,13 +170,15 @@ class Filters extends Component {
           <Col md={3} id="filters-title-col">
             <h2 id="filters-title">Promot<span style={{color:"#5da9e9"}}>Ed</span></h2>
           </Col>
+          <Col md={{span:2, offset:7}}>
+            <Button style={{marginTop: "2vh"}} variant="primary" id="backBtn"><Link to="/">Back to search</Link></Button>
+          </Col>
         </Row>
         <Row style={{marginTop:"2vmin"}}>
           <Col md={{span:8, offset:2}}>
             <div id="goal-div">
               <h3>Curriculum for: <span style={{color:"#5da9e9"}}>{this.props.location.query}</span></h3>
             </div>
-
           </Col>
         </Row>
         <Row>
@@ -180,7 +203,7 @@ class Filters extends Component {
                     (
                       <Col md={3}  className="filter">
                        <p>Duration: {this.state.duration} weeks</p>
-                       <SliderWithTooltip min={this.state.durationRange[0]} max={this.state.durationRange[1]} defaultValue={this.state.duration} tipFormatter={value => `${value}`} onChange={this.updateDuration}/>
+                       <SliderWithTooltip min={this.state.durationRange[0]} max={this.state.durationRange[1]} value={this.state.duration} tipFormatter={value => `${value}`} onChange={this.updateDuration}/>
                      </Col>
                    ) : null }
               </Row>
@@ -195,4 +218,4 @@ class Filters extends Component {
   }
 }
 
-export default Filters;
+export default withRouter(Filters);

@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter, Route} from 'react-router-dom';
-import SearchResult from './components/SearchResult';
 import Filters from './components/Filters';
 
 
@@ -12,7 +11,6 @@ ReactDOM.render(
   <BrowserRouter>
     <Route exact path="/" component={App}/>
     <Route path="/filter" component={Filters}/>
-    <Route path="/result" component={SearchResult}/>
   </BrowserRouter>,
   document.getElementById('root')
 );
