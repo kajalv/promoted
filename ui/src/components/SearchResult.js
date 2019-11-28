@@ -8,7 +8,7 @@ class SearchResult extends Component {
 
   render() {
     return (
-      <Container className="App-header">
+      <Container>
         <h1 className="Result-title">Curriculum Result</h1>
 
         <Card border="primary" style={{ width: '24rem' }}>

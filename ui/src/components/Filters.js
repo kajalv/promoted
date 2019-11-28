@@ -6,6 +6,8 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
+
 import '../styles/Filters.css';
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
@@ -132,7 +134,40 @@ class Filters extends Component {
             </Form>
           </Col>
         </Row>
+
+        <Row>
+          <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
+            <Card>
+              <Card.Header>edX</Card.Header>
+              <Card.Body>
+                <Card.Title>Machine Learning by Andrew NG</Card.Title>
+                <Card.Text>
+                  Duration : x weeks
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer className="text-muted">Free</Card.Footer>
+            </Card>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
+            <Card>
+              <Card.Header>edX</Card.Header>
+              <Card.Body>
+                <Card.Title>Machine Learning by Andrew NG</Card.Title>
+                <Card.Text>
+                  Duration : x weeks
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer className="text-muted">Free</Card.Footer>
+            </Card>
+          </Col>
+        </Row>
+        
       </Container>
+
+
     );
   }
 }
