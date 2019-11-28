@@ -26,7 +26,9 @@ class Filters extends Component {
       durationRange:[],
       duration: -1,
       //level: this.props.location.query.includes("Senior") ? "Intermediate" : "Beginner"
-      levels: new Set(["beginner"])
+      levels: new Set(["beginner"]),
+      allData: [],
+      currentData: []
     }
   }
 
@@ -48,13 +50,13 @@ class Filters extends Component {
     this.setState({
       minPrice: value[0],
       maxPrice: value[1]
-    })
+    });
   }
 
   showLevelOptions = () => {
     this.setState({
       showLevelOptions: !this.state.showLevelOptions
-    })
+    });
   }
 
   updateLevel = (event) => {
@@ -80,16 +82,46 @@ class Filters extends Component {
   componentDidMount() {
     let {min, max} = this.getPriceRange();
     let {minD, maxD} = this.getDurationRange();
-    this.setState({
-      priceRange:[min, max],
-      minPrice: min,
-      maxPrice: max,
-      durationRange :[minD, maxD],
-      duration: maxD
-    })
+    //let url = 'http://localhost:5000/get_courses?job_title=' + this.props.location.query;
+    let url = 'http://localhost:5000/get_courses?job_title=' + "Software Developer";
+    fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            }).then(response => response.json())
+            .then(data => {
+                console.log(data);
+                let currentData = data.slice(0,10);
+                this.setState({
+                  priceRange:[min, max],
+                  minPrice: min,
+                  maxPrice: max,
+                  durationRange :[minD, maxD],
+                  duration: maxD,
+                  allData: data,
+                  currentData: currentData
+                });
+            });
   }
 
-  render(){
+  render() {
+    let coursesDataJSX = this.state.currentData.map(course =>
+      <Row>
+        <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
+          <Card>
+            <Card.Header>{course.site}</Card.Header>
+            <Card.Body>
+              <Card.Title>{course.title}</Card.Title>
+              <Card.Text>
+                Duration : {course.duration} weeks
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer className="text-muted">${course.price}</Card.Footer>
+          </Card>
+        </Col>
+      </Row>
+    );
     return (
       <Container id="filter-container" fluid={true}>
         <Row>
@@ -135,39 +167,9 @@ class Filters extends Component {
           </Col>
         </Row>
 
-        <Row>
-          <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
-            <Card>
-              <Card.Header>edX</Card.Header>
-              <Card.Body>
-                <Card.Title>Machine Learning by Andrew NG</Card.Title>
-                <Card.Text>
-                  Duration : x weeks
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer className="text-muted">Free</Card.Footer>
-            </Card>
-          </Col>
-        </Row>
+        {coursesDataJSX}
 
-        <Row>
-          <Col md={{span:8, offset:2}} style={{marginTop: "2vmin"}}>
-            <Card>
-              <Card.Header>edX</Card.Header>
-              <Card.Body>
-                <Card.Title>Machine Learning by Andrew NG</Card.Title>
-                <Card.Text>
-                  Duration : x weeks
-                </Card.Text>
-              </Card.Body>
-              <Card.Footer className="text-muted">Free</Card.Footer>
-            </Card>
-          </Col>
-        </Row>
-        
       </Container>
-
-
     );
   }
 }
