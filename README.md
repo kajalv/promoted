@@ -1,21 +1,34 @@
 # PromotED
-PromotEd recommends courses from multiple MOOC providers based on the skills required for a specific job role. The skills required for each job is collected beforehand from available datasets. Similarly, information about available courses are also procured from multiple MOOC platforms like Udacity, Udemy, and edX. At runtime, both these datasets are used to recommend courses to the user.
+
+PromotEd recommends courses from multiple MOOC providers based on the skills required for a specific job role. The skills required for each job is collected beforehand from available datasets. Similarly, information about available courses are also procured from multiple MOOC platforms like Udacity, Udemy, and edX. At runtime, all these datasets are used to recommend courses to the user.
 
 # Installation
 
-After retrieving the github code, doing the following steps to setup the application.
+After retrieving the GitHub code, perform the following steps to setup the application.
 
 ## Running the server
 
-> python server.py # should have Flask installed
+```
+python server.py
+```
+
+Flask should be installed and Python v3.x should be used. The command may change to `python3 server.py` in some systems.
 
 ## Running the client (user interface)
 
-> yarn install 
+`cd` to the `ui` directory and start the interface with `yarn`.
 
-> yarn start
+```
+yarn install 
+yarn start
+```
 
-NPM can be used instead of Yarn.
+Alternatively, `npm` can also be used instead of `yarn`.
+
+```
+npm install
+npm start
+```
 
 # Demo
 
@@ -45,7 +58,7 @@ We used the data from three platforms for this project - Udemy, Udacity and edX.
 
 # APIs
 
-> GET /get_courses?job_title=_JOB TITLE_
+> `GET /get_courses?job_title=_JOB TITLE_`
 
 The response is an array of JSON objects each of which represents a course. An example is given below.
 
@@ -70,9 +83,9 @@ The response is an array of JSON objects each of which represents a course. An e
   ]
 ```
 
-> GET /get_jobs
+> `GET /get_jobs`
 
-The response is an array of job titles
+The response is an array of job titles.
 
 ```json
 [
