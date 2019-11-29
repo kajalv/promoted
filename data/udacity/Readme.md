@@ -11,4 +11,4 @@ Fields used:
 * expected_duration
 * expected_duration_unit
 * skills
-* is free course (this is computed)
+* is_free_course 
