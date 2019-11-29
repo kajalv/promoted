@@ -12,6 +12,7 @@ After retrieving the github code, doing the following steps to setup the applica
 ## Running the client (user interface)
 
 > yarn install 
+
 > yarn start
 
 NPM can be used instead of Yarn.
