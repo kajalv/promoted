@@ -104,7 +104,16 @@ class Filters extends Component {
   getCurrentData() {
     let currentData = [];
     let allData = this.state.allData;
-    allData.sort((a, b) => (a.duration > b.duration) ? 1 : -1)
+    allData.sort((a, b) => {
+      if (a.duration === b.duration) {
+        return a.title.localeCompare(b.title);
+      } else if (a.duration < b.duration) {
+        return -1;
+      } else {
+        return 1;
+      }
+    })
+    console.log(allData);
     let totalD = 0;
     for(let index = 0; index < allData.length; index++) {
       // if (currentData.length >= displayCount)
