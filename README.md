@@ -19,7 +19,29 @@ NPM can be used instead of Yarn.
 
 # Demo
 
+Once you have the client and server running (follow steps above), open your browser and go to http://localhost:3000. This opens up the home page of the application.
+
 # Datasets
+
+## Job skills dataset
+
+We used two datasets for this application.
+
+* https://www.kaggle.com/PromptCloudHQ/us-jobs-on-monstercom
+* https://www.kaggle.com/PromptCloudHQ/usbased-jobs-from-dicecom
+
+We did some custom transformations on the datasets using OpenRefine. Some of the transformations include
+
+* Clustering similar job titles
+* Standardizing vocabulary e.g. converting Software Engineer, Software Development Engineer etc., to Software Developer
+
+The cleaned and transformed datasets are provided under `/data/jobs-data` in the files `dice_US_jobs-clean.csv` and `monster_com_jobs-clean.csv`
+
+The job skillset keywords are extracted by executing `keywords.py` provided under `/data/jobs-data`.
+
+## Course catalog dataset
+
+We used the data from three platforms for this project - Udemy, Udacity and edX. The details about the APIs and the scripts used are provided in respective folders under `/data`. 
 
 # APIs
 
