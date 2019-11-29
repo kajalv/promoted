@@ -58,7 +58,7 @@ We used the data from three platforms for this project - Udemy, Udacity and edX.
 
 # APIs
 
-> `GET /get_courses?job_title=_JOB TITLE_`
+> GET /get_courses?job_title=_JOB TITLE_
 
 The response is an array of JSON objects each of which represents a course. An example is given below.
 
@@ -83,7 +83,7 @@ The response is an array of JSON objects each of which represents a course. An e
   ]
 ```
 
-> `GET /get_jobs`
+> GET /get_jobs
 
 The response is an array of job titles.
 
