@@ -41,7 +41,7 @@ class Filters extends Component {
     for (var i = 0; i < data.length; i++) {
       if (levels.has(this.mappedCourseLevel(data[i].level))) {
         minD = Math.min(minD, data[i].duration)
-        maxD = Math.max(maxD, data[i].duration)
+        maxD = maxD + data[i].duration
       }
     }
     return {
@@ -52,19 +52,11 @@ class Filters extends Component {
 
   getPriceRange = (data, levels) => {
     let minP = Number.MAX_SAFE_INTEGER, maxP = 0;
-    let modified = false
     for (var i = 0; i < data.length; i++) {
       if (levels.has(this.mappedCourseLevel(data[i].level))) {
-        modified = true
         minP = Math.min(minP, data[i].price)
         maxP = Math.max(maxP, data[i].price)
       }
-    }
-    if (!modified) {
-      return {
-        min:  0,
-        max:  0
-      };
     }
     return {
       min: Math.round(minP),
@@ -94,10 +86,7 @@ class Filters extends Component {
     this.setState({
       levels:levels,
       priceRange:[min, max],
-      minPrice: min,
-      maxPrice: max,
-      durationRange :[minD, maxD],
-      duration: maxD
+      durationRange :[minD, maxD]
     });
   }
 
@@ -113,19 +102,26 @@ class Filters extends Component {
   }
 
   getCurrentData() {
-    let displayCount = 10;
     let currentData = [];
-    for(let index = 0; index < this.state.allData.length; index++) {
+    let allData = this.state.allData;
+    allData.sort((a, b) => (a.duration > b.duration) ? 1 : -1)
+    let totalD = 0;
+    for(let index = 0; index < allData.length; index++) {
       // if (currentData.length >= displayCount)
       //   break;
-      let course = this.state.allData[index];
-      if (course.duration <= this.state.duration
-            && course.price >= this.state.minPrice
-            && course.price <= this.state.maxPrice
-            && this.state.levels.has(this.mappedCourseLevel(course.level)))
-          currentData.push(course);
+      let course = allData[index];
+
+      if (course.price >= this.state.minPrice && course.price <= this.state.maxPrice
+            && this.state.levels.has(this.mappedCourseLevel(course.level))){
+              if (totalD + course.duration > (this.state.duration)) {
+                break;
+              }
+              currentData.push(course);
+              totalD += course.duration;
+            }
+
     }
-    currentData = currentData.slice(0, this.state.duration)
+
     return currentData;
   }
 
@@ -155,9 +151,7 @@ class Filters extends Component {
   render() {
     let currentData = this.getCurrentData();
     let coursesDataJSX = [];
-    // if (currentData.length%2 != 0) {
-    //   currentData = currentData.slice(0, currentData.length-1)
-    // }
+
     for (var i = 0; i < currentData.length; i+=2) {
       coursesDataJSX.push(
         <Row key={i}>
@@ -231,7 +225,7 @@ class Filters extends Component {
               {this.state.duration !== -1 ?
                     (
                       <Col md={3}  className="filter">
-                       <p>Duration: {this.state.duration} weeks</p>
+                       <p>Time Budget: {this.state.duration} weeks</p>
                        <SliderWithTooltip min={this.state.durationRange[0]} max={this.state.durationRange[1]} value={this.state.duration} tipFormatter={value => `${value}`} onChange={this.updateDuration}/>
                      </Col>
                    ) : null }
