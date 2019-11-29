@@ -23,7 +23,7 @@ NPM can be used instead of Yarn.
 
 # APIs
 
-> /get_courses?job_title=_JOB TITLE_
+> GET /get_courses?job_title=_JOB TITLE_
 
 The response is an array of JSON objects each of which represents a course. An example is given below.
 
@@ -48,7 +48,7 @@ The response is an array of JSON objects each of which represents a course. An e
   ]
 ```
 
-> /get_jobs
+> GET /get_jobs
 
 The response is an array of job titles
 
