@@ -1,18 +1,26 @@
 # PromotED
-DVA project
+PromotEd recommends courses from multiple MOOC providers based on the skills required for a specific job role. The skills required for each job is collected beforehand from available datasets. Similarly, information about available courses are also procured from multiple MOOC platforms like Udacity, Udemy, and edX. At runtime, both these datasets are used to recommend courses to the user.
+
+# Installation
+
+After retrieving the github code, doing the following steps to setup the application.
 
 ## Running the server
 
-> python server.py
+> python server.py # should have Flask installed
 
-## Running the UI
+## Running the client (user interface)
 
-> yarn install # if you did a git pull  
+> yarn install 
 > yarn start
 
-## APIs
+NPM can be used instead of Yarn.
 
-The client uses the below GET API to get the courses for a specified job title.
+# Demo
+
+# Datasets
+
+# APIs
 
 > /get_courses?job_title=_JOB TITLE_
 
@@ -38,4 +46,14 @@ The response is an array of JSON objects each of which represents a course. An e
     }
   ]
 ```
-  
+
+> /get_jobs
+
+The response is an array of job titles
+
+```json
+[
+  "Software Developer", 
+  "Senior Mobile Developer"
+]
+```
