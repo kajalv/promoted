@@ -1,7 +1,9 @@
 API Information:
 
 URL: https://www.udacity.com/public-api/v1/courses
+
 Method: GET
+
 Permission: NONE
 
 Fields used:
