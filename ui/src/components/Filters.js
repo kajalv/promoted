@@ -52,11 +52,19 @@ class Filters extends Component {
 
   getPriceRange = (data, levels) => {
     let minP = Number.MAX_SAFE_INTEGER, maxP = 0;
+    let modified = false
     for (var i = 0; i < data.length; i++) {
       if (levels.has(this.mappedCourseLevel(data[i].level))) {
+        modified = true
         minP = Math.min(minP, data[i].price)
         maxP = Math.max(maxP, data[i].price)
       }
+    }
+    if (!modified) {
+      return {
+        min: 0,
+        max: 0
+      };
     }
     return {
       min: Math.round(minP),
