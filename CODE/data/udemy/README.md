@@ -2,7 +2,7 @@
 
 ## Usage
 
-The script `api_udemy.py`  runs the Udemy API and collects data into `dataset.csv`. The Udemy API credentials need to be configured in `~/.bash_profile` as environment variables `$UDEMY_CLIENT_ID`, `$UDEMY_CLIENT_SECRET`, and `$UDEMY_BASE64`. It takes about 15 minutes to run.
+The script `api_udemy.py`  runs the Udemy API and collects data into `dataset.csv`. The Udemy API credentials need to be configured in `~/.bash_profile` as environment variables `$UDEMY_CLIENT_ID`, `$UDEMY_CLIENT_SECRET`, and `$UDEMY_BASE64`. The client credentials are obtained after approval from Udemy. The Python script takes about 15 minutes to run.
 
 ```
 python api_udemy.py
@@ -14,30 +14,23 @@ Then, since the Udemy API makes use of `[]` reserved characters, a shell script 
 sh get_ratings.sh
 ```
 
-To extract recommended courses, put the keywords in `in.txt` and run:
-
-```
-python3 keywords.py
-```
-
 ## API Information
 
 ### Courses
 
-Fields we can use:
+Fields we use:
 
 - title (Name)
 - is_paid
 - price
+- duration
 - avg_rating
-- description
-- headline
 - url
 - primary_category
 - instructional_level
 
 Rating, duration, instructional level, category:
-We can filter courses by these in the request, but the information is not available in the response by default.
+We can filter courses by these in the request, but the information is not available in the response by default. To obtain course-level information a separate `fields[course]` query parameter needs to be passed, as is done in `get_ratings.sh`.
 
 ### Categories
 
@@ -59,10 +52,12 @@ We can filter courses by these in the request, but the information is not availa
 
 - relevance
 - most-reviewed
-- highest-rated (We will use this one)
+- highest-rated
 - newest
 - price-low-to-high
 - price-high-to-low
+
+We use `highest-rated` to obtain the best courses in the dataset. The user can further filter courses by price and time commitment on the UI.
 
 ## Required dependencies
 
