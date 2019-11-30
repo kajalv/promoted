@@ -8,6 +8,8 @@ After retrieving the GitHub code, perform the following steps to setup the appli
 
 ## Running the server
 
+`cd` to the `CODE` directory and start the server with the following command:
+
 ```
 python server.py
 ```
@@ -16,7 +18,7 @@ Flask should be installed and Python v3.x should be used. The command may change
 
 ## Running the client (user interface)
 
-`cd` to the `ui` directory and start the interface with `yarn`.
+`cd` to the `CODE/ui` directory and start the interface with `yarn`.
 
 ```
 yarn install 

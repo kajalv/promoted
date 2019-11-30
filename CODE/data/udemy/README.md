@@ -16,6 +16,8 @@ sh get_ratings.sh
 
 ## API Information
 
+Documentation: [Udemy Affiliate API Documentation (v2.0)](https://www.udemy.com/developers/affiliate/)
+
 ### Courses
 
 Fields we use:

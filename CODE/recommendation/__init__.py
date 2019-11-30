@@ -1,1 +1,1 @@
-from recommendation.keywords import get_courses
+from recommendation.course_recommendations import get_courses
