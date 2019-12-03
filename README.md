@@ -12,15 +12,12 @@ Since we have a limited number of requests in the free tier per month, this may 
 
 After retrieving the GitHub code, perform the following steps to setup the application.
 
-## Install dependencies
-
-In the root directory, execute `pip install -r requirements.txt`.
-
 ## Running the server
 
 `cd` to the `CODE` directory and start the server with the following command:
 
 ```
+pip install -r requirements.txt
 python server.py
 ```
 
@@ -31,7 +28,7 @@ Flask should be installed and Python v3.x should be used. The command may change
 `cd` to the `CODE/ui` directory and start the interface with `yarn`.
 
 ```
-yarn install 
+yarn install
 yarn start
 ```
 
@@ -70,7 +67,7 @@ The job skillset keywords are extracted by executing `keywords.py` provided unde
 
 ## Course catalog dataset
 
-We used the data from three platforms for this project - Udemy, Udacity and edX. The details about the APIs and the scripts used are provided in respective folders under `/data`. 
+We used the data from three platforms for this project - Udemy, Udacity and edX. The details about the APIs and the scripts used are provided in respective folders under `/data`.
 
 # APIs
 
@@ -105,7 +102,7 @@ The response is an array of job titles.
 
 ```json
 [
-  "Software Developer", 
+  "Software Developer",
   "Senior Mobile Developer"
 ]
 ```
