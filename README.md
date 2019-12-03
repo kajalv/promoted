@@ -12,6 +12,10 @@ Since we have a limited number of requests in the free tier per month, this may 
 
 After retrieving the GitHub code, perform the following steps to setup the application.
 
+## Install dependencies
+
+In the root directory, execute `pip install -r requirements.txt`.
+
 ## Running the server
 
 `cd` to the `CODE` directory and start the server with the following command:
