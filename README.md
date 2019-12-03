@@ -4,7 +4,7 @@ PromotEd recommends courses from multiple MOOC providers based on the skills req
 
 # Usage
 
-Go to [promoted.herokuapp.com](promoted.herokuapp.com) to view the app.
+Go to [promoted.herokuapp.com](https://promoted.herokuapp.com/) to view the app.
 
 Since we have a limited number of requests in the free tier per month, this may not work. If so, please follow the steps below to setup the app on your system.
 
@@ -40,7 +40,7 @@ npm start
 
 # Demo
 
-Go to [promoted.herokuapp.com](promoted.herokuapp.com) to view the app.
+Go to [promoted.herokuapp.com](https://promoted.herokuapp.com/) to view the app.
 
 Since we have a limited number of requests in the free tier per month, this may not work. If so, please follow the steps in the Installation section to setup the app on your system.
 
