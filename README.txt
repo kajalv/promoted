@@ -6,7 +6,7 @@ PromotEd recommends courses from multiple MOOC providers based on the skills req
 
 Usage
 -----
-Go to promoted.herokuapp.com to view the app.
+Go to https://promoted.herokuapp.com to view the app.
 
 Since we have a limited number of requests in the free tier per month, this may not work. If so, please follow the steps below to setup the app on your system.
 
@@ -15,6 +15,8 @@ Since we have a limited number of requests in the free tier per month, this may 
 Alternative: Installation
 -------------------------
 After retrieving the GitHub code, perform the following steps to setup the application.
+
+Install dependencies by executing pip install -r requirements.txt
 
 Running the server:
 cd to the CODE directory and start the server with the following command:
@@ -35,7 +37,7 @@ npm start
 
 Demo
 ----
-Go to promoted.herokuapp.com to view the app.
+Go to https://promoted.herokuapp.com to view the app.
 
 Since we have a limited number of requests in the free tier per month, this may not work. If so, please follow the steps in the Installation section to setup the app on your system.
 
