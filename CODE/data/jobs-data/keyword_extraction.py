@@ -10,8 +10,8 @@ from sklearn.feature_extraction.text import TfidfTransformer
 from scipy.sparse import coo_matrix
 
 # NOTE: Change the dataset name here and output file name.
-dataset1 = pandas.read_csv('dice_US_jobs-csv.csv', delimiter = ',')
-dataset2 = pandas.read_csv('monster_com_jobs-csv.csv', delimiter = ',')
+dataset1 = pandas.read_csv('dice_US_jobs-clean.csv', delimiter = ',')
+dataset2 = pandas.read_csv('monster_com_jobs-clean.csv', delimiter = ',')
 dataset = pandas.concat([dataset1, dataset2], sort=False)
 
 stop_words = set(stopwords.words("english"))
