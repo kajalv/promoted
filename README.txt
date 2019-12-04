@@ -1,3 +1,6 @@
+DESCRIPTION
+-----------
+
 PromotEd
 --------
 PromotEd recommends courses from multiple MOOC providers based on the skills required for a specific job role. The skills required for each job is collected beforehand from available datasets. Similarly, information about available courses are also procured from multiple MOOC platforms like Udacity, Udemy, and edX. At runtime, all these datasets are used to recommend courses to the user.
@@ -12,7 +15,7 @@ Since we have a limited number of requests in the free tier per month, this may 
 
 
 
-Alternative: Installation
+ALTERNATIVE: INSTALLATION
 -------------------------
 After retrieving the GitHub code, perform the following steps to setup the application.
 
@@ -38,8 +41,8 @@ npm start
 
 
 
-Demo
-----
+EXECUTION
+---------
 Go to https://promoted.herokuapp.com to view the app.
 
 Since we have a limited number of requests in the free tier per month, this may not work. If so, please follow the steps in the Installation section to setup the app on your system.
