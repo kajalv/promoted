@@ -71,6 +71,8 @@ The job skillset keywords are extracted by executing keywords.py provided under 
 
 We used the data from three platforms for this project - Udemy, Udacity and edX. The details about the APIs and the scripts used are provided in respective folders under /data.
 
+Some of our transformations were done through OpenRefine, and also, the datasets are in the order of MB. So we have included them. This is to ensure that the working demo can be run locally.
+
 APIs
 ----
 > GET /get_courses?job_title=_JOB TITLE_
